@@ -28,10 +28,17 @@
     }
     
     const populateTodos = () => {
+    for (let i = 0; i < arrayOfTodos.length; i++) { 
     let toDoList = document.getElementById("todo-list")
     let element =document.createElement("li")
-    let text = document.createTextNode(arrayOfTodos[0].title)
+    let text = document.createTextNode(arrayOfTodos[i].title)
     element.appendChild(text)
     toDoList.appendChild(element)
     }
-
+    }
+    // const arrayOfTodos = () => {
+      
+        // while (counter <= 100) {
+          
+        // }
+    //   }
