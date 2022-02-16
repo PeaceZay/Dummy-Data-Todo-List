@@ -1,6 +1,6 @@
-    // We'll pre-populate this array with a couple objects just so it's not undefined if your internet connection isn't working properly.
+// We'll pre-populate this array with a couple objects just so it's not undefined if your internet connection isn't working properly.
 
-    
+
 
 const fetchTodos = () => {
     fetch('https://jsonplaceholder.typicode.com/todos')
@@ -24,8 +24,16 @@ const populateTodos = () => {
 }
 const filterTodoByUser = () => {
     let userSelected = document.getElementById("userSelected").value
-
     const todoByUserArray = arrayOfTodos.filter(todo => todo.userId == userSelected);
+
+
+    // const filterTodoByCompleted = () => {
+    //     let completed = document.getElementById("completed").value
+
+    //     const todoByUserArray = arrayOfTodos.filter(completed => completed.userId == completed)
+    // console.log(filterTodoByCompleted)
+    // }
+
 
     clearScreen()
     for (let i = 0; i < todoByUserArray.length; i++) {
@@ -42,7 +50,7 @@ const clearScreen = () => {
     console.log(allListElements)
     for (let index = 0; index < allListElements.length; index++) {
         allListElements[index].remove();
-        
+
     }
 }
 
